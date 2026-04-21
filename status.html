@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOPI SUDUT - Status Pesanan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS Tambahan khusus untuk visualisasi status */
+        .status-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .status-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+        .order-id {
+            background: var(--light-bg);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        .stepper-status {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .stepper-item {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+        .step-counter {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #dfe6e9;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .stepper-item.completed .step-counter { background: var(--success); color: white; }
+        .stepper-item.active .step-counter { background: var(--primary-color); color: white; }
+        
+        .status-label { font-size: 0.85rem; font-weight: 600; }
+        
+        .btn-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: var(--dark-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .btn-home:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="desktop-wrapper">
+        <aside class="sidebar">
+            <div class="brand-section">
+                <div class="icon-cafe">☕</div>
+                <h2>KOPI SUDUT</h2>
+                <p>Table 12</p>
+            </div>
+            <nav class="side-nav">
+                <a href="index.html">⬅ Kembali ke Menu</a>
+                <a href="#" class="active">📍 Status Pesanan</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h2>Pelacakan Pesanan</h2>
+            </header>
+
+            <section class="status-container">
+                <div class="status-card">
+                    <span class="order-id">ID Pesanan: #KS-20260416</span>
+                    <h3>Hai, Namira Humaira!</h3>
+                    <p style="margin-bottom: 30px;">Pesanan Anda sedang kami siapkan dengan sepenuh hati.</p>
+
+                    <div class="stepper-status">
+                        <div class="stepper-item completed">
+                            <div class="step-counter">✓</div>
+                            <div class="status-label">Divalidasi</div>
+                        </div>
+                        <div class="stepper-item active">
+                            <div class="step-counter">2</div>
+                            <div class="status-label">Dimasak</div>
+                        </div>
+                        <div class="stepper-item">
+                            <div class="step-counter">3</div>
+                            <div class="status-label">Siap Diambil</div>
+                        </div>
+                    </div>
+
+                    <div class="order-preview" style="text-align: left; box-shadow: none; border: 1px solid #eee;">
+                        <p><strong>Detail Pesanan:</strong></p>
+                        <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                            <li style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                <span>1x Amerikano (Less Sugar)</span>
+                                <span>Rp 20.000</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="index.html" class="btn-home">Pesan Menu Lain</a>
+                </div>
+                <p style="margin-top: 20px; color: #777; font-size: 0.9rem;">Halaman akan diperbarui otomatis saat status berubah.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

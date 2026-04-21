@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOPI SUDUT - Keranjang Belanja</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="desktop-wrapper">
+        <aside class="sidebar">
+            <div class="brand-section">
+                <div class="icon-cafe">☕</div>
+                <h2>KOPI SUDUT</h2>
+                <p>Table 12</p>
+            </div>
+            <nav class="side-nav">
+                <a href="index.html">Coffee</a>
+                <a href="index.html#tea">Tea</a>
+                <a href="index.html#food">Food</a>
+                <a href="#" class="active">Keranjang</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h2>Keranjang Belanja Anda</h2>
+            </header>
+
+            <section class="cart-table-container">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Produk</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="product-cell">
+                                <img src="img/amerikano.jpg" alt="Amerikano">
+                                <span>Amerikano</span>
+                            </td>
+                            <td>Rp 20.000</td>
+                            <td>
+                                <div class="qty-stepper">
+                                    <button type="button">-</button>
+                                    <input type="number" value="1" min="1">
+                                    <button type="button">+</button>
+                                </div>
+                            </td>
+                            <td>Rp 20.000</td>
+                            <td><button class="btn-remove">Hapus</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="cart-summary-box">
+                    <h3>Ringkasan Pesanan</h3>
+                    <div class="summary-item">
+                        <span>Total</span>
+                        <span class="total-price">Rp 20.000</span>
+                    </div>
+                    <a href="checkout.html" class="btn-confirm-final" style="text-decoration: none; display: block; text-align: center;">Lanjut ke Pembayaran</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
